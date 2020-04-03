@@ -52,7 +52,9 @@ namespace detinfo{
 
       /// dQ/dX in electrons/cm, returns dE/dX in MeV/cm.
       virtual double BirksCorrection(double dQdX) const = 0;
+      virtual double BirksCorrection(double dQdX, double E_field) const = 0;
       virtual double ModBoxCorrection(double dQdX) const = 0;
+      virtual double ModBoxCorrection(double dQdX, double E_field) const = 0;
 
       /**
        * @brief Returns the attenuation constant for ionization electrons.
