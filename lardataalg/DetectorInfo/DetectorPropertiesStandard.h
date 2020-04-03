@@ -210,7 +210,9 @@ namespace detinfo{
 
       /// dQ/dX in electrons/cm, returns dE/dX in MeV/cm.
       virtual double BirksCorrection(double dQdX) const override;
+      virtual double BirksCorrection(double dQdX, double E_field) const override;
       virtual double ModBoxCorrection(double dQdX) const override;
+      virtual double ModBoxCorrection(double dQdX, double E_field) const override;
 
       virtual double ElectronLifetime() const override { return fElectronlifetime; }   //< microseconds
 
